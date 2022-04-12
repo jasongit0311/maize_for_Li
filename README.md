@@ -12,17 +12,17 @@ Usage: sh afd.sh -w ${workdir} -p1 ${[pop1 name} -p2 ${pop2 name} -f ${genome *.
 
 Options:
 
--w the working path where the result file is stored
+-w   the working path where the result file is stored
 
--p1 name of group 1
+-p1   name of pop 1
 
--p2 name of group 2
+-p2   name of pop 2
 
--f genome fai file
+-f   genome fai file
 
--wsz window size for analysis
+-wsz   window size for analysis
 
--step size for stp analysis 
+-stp   step size for analysis 
 
 
 ## Counting the number of F1 heterozygous sites
