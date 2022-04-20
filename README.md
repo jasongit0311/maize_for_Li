@@ -37,7 +37,8 @@ Convert vcf to genotype format file for easy sample extraction and marker,vcf fi
 
 ## Calculate SNP/gene density
 Through this script, the SNP/gene density within the window can be calculated 
-depth file has three columns: chromosome/position/count
+
+    depth file has three columns: chromosome/position/count
 
     Usage: python3 ${genome fai file} ${depth file} ${window size} ${step size} ${output file}
 
