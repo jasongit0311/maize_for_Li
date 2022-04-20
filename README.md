@@ -1,7 +1,7 @@
 # maize_for_Li
 This is the script repository for Mr. Li's article
 
-## Calculating Breeding Values
+## Calculate Breeding Values
 Please install the R package first: lme4 & Matrix & lmerTest
 
 Rscript blup_code.r ${your phenotype file}
@@ -25,12 +25,12 @@ Options:
 -stp   step size for analysis 
 
 
-## Counting the number of F1 heterozygous sites
+## Count the number of F1 heterozygous sites
 Before use, please extract the vcf file and compress it with gzip
 
 Usage: python Get.het_position.py ${vcf file} ${your parent lines} ${output het stat file} > ${output genotype file}
 
-## Trans VCF file to Genotype file
+## Transform VCF file to Genotype file
 Convert vcf to genotype format file for easy sample extraction and marker,vcf file needs to be compressed with gzip
 
 Usage: python2 trans_vcf_to_geno.pyc ${gzvcf ifle} ${output name}
