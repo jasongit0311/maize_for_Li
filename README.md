@@ -75,7 +75,7 @@ Usage: sh calculate_geno_ave_pValue.sh  -g ${geno file} -p ${pheno file} -r ${th
 
 -w workdir
 
-## other R code
+## Other R code
 Statistic of effects for reference allele and alternative allele at associated SNPs
 
 Rscript update_code.R ${workdir} ${input file} ${output file}
