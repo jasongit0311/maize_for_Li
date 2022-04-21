@@ -98,3 +98,7 @@ Options:
 Statistic of effects for reference allele and alternative allele at associated SNPs
 
     Usage: Rscript update_code.R ${workdir} ${input file} ${output file}
+
+## Author
+
+Dr. Chunhui Li (lichunhui@caas.cn)
