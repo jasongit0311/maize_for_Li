@@ -3,7 +3,7 @@ This is the script repository for Mr. Li's article
 
 
 ## Calculate Breeding Values
-Calculate Breeding Values
+A best linear unbiased predictor (BLUP) value of each trait across multiple environmental trials was obtained for each inbred line by a linear mixed model in R (v3.6.1)
 
     Usage: Rscript blup_code.r ${your phenotype file}
 
