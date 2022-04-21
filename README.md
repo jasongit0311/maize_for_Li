@@ -1,14 +1,17 @@
 # Whole genome resequencing data analysis of maize germplasm
 This is the script repository for Mr. Li's article
 
+
 ## Calculate Breeding Values
 Calculate Breeding Values
+
+    Usage: Rscript blup_code.r ${your phenotype file}
 
 Note:
 
     #Please install the R package first: lme4 & Matrix & lmerTest
 
-    Usage: Rscript blup_code.r ${your phenotype file}
+
 ## AFD analysis
     Usage: sh afd.sh -w ${workdir} -p1 ${[pop1 name} -p2 ${pop2 name} -f ${genome *.fai file} -wsz ${window size} -stp ${step size}
 
@@ -33,6 +36,13 @@ Options:
     -stp   step size for analysis 
 
 
+## Fst analysis
+
+Usage: using vcftools
+
+    vcftools --vcf in.vcf --weir-fst-pop population1.txt --weir-fst-pop population2.txt  --out p_1_2_bin --fst-window-size 20000 --fst-window-step 10000
+
+
 ## Count the number of heterozygous sites in hybrids
 Calculate the number of heterozygous sites in hybrids for female group x male group heterotic pattern
 
@@ -52,26 +62,6 @@ Note:
 
     #<depth file> has three columns: chromosome / position / count
 
-## Pick up sample in vcf file according to the specified genotype
-Using the specified genotype (ref:00 ; alt:11 ; hybrid:01), extract the corresponding sample from the vcf file
-
-    Usage:sh pick_sample.sh -i vcf.gz -p refalt -l 4 -g '11|22' -o refalt.out
-
-Note:
-
-    #need new_vcfgeno2.pyc in common workdir
-
-Options:
-
-    -i  input.vcf.gz
-
-    -p  prefix
-
-    -l  snp number
-
-    -g  genotype to be extracted, use "|" as the delimiter, and add single quotes before and after, 00 means homozygous ref;11 means homozygous alt;01 means hybrid  e.g.: '00|11' 
-
-    -o outputfile
 
 ## Calculate the effect of homozygous alleles and heterozygous allele in testcross population
 Based on the genotype file and phenotype file, the effect of homozygous alleles (homozygous Ref and Alt) and heterozygous allele of each genotype site can be calculated, and the significance of phenotypic difference between homozygous Ref allele and homozygous Alt allele can be also calculated.
@@ -94,10 +84,12 @@ Options:
 
     -w workdir
 
+
 ## Other R code
 Statistic of effects for reference allele and alternative allele at associated SNPs
 
     Usage: Rscript update_code.R ${workdir} ${input file} ${output file}
+
 
 ## Author
 
