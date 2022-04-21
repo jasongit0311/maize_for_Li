@@ -1,4 +1,4 @@
-# maize_for_Li
+# Whole genome resequencing data analysis of maize germplasm
 This is the script repository for Mr. Li's article
 
 ## Calculate Breeding Values
@@ -33,8 +33,8 @@ Options:
     -stp   step size for analysis 
 
 
-## Count the number of F1 heterozygous sites
-Calculate the number of F1 heterozygotes by specifying parents
+## Count the number of heterozygous sites in hybrids
+Calculate the number of heterozygous sites in hybrids for female group x male group heterotic pattern
 
     Usage: python Get.het_position.py ${vcf file} ${your parent lines} ${output het stat file} > ${output genotype file}
 
@@ -42,15 +42,9 @@ Note:
 
     #Before use, please extract the vcf file and compress it with gzip
 
-    
-
-## Transform VCF file to Genotype file
-Convert vcf to genotype format file for easy sample extraction and marker,vcf file needs to be compressed with gzip
-
-    Usage: python2 trans_vcf_to_geno.pyc ${gzvcf ifle} ${output name}
 
 ## Calculate SNP/gene density
-Through this script, the SNP/gene density within the window can be calculated 
+Using this script, the SNP/gene density within the non-overlapping genomic window can be calculated at the genome-wide level
 
     Usage: python3 ${genome fai file} ${depth file} ${window size} ${step size} ${output file}
 
@@ -79,8 +73,8 @@ Options:
 
     -o outputfile
 
-## Calculate geno average and pValue
-According to the input genotype file and phenotype file, the phenotype mean and significance (homozygous ref and alt) of each locus genotype can be calculated
+## Calculate the effect of homozygous alleles and heterozygous allele in testcross population
+Based on the genotype file and phenotype file, the effect of homozygous alleles (homozygous Ref and Alt) and heterozygous allele of each genotype site can be calculated, and the significance of phenotypic difference between homozygous Ref allele and homozygous Alt allele can be also calculated.
 
     Usage: sh calculate_geno_ave_pValue.sh  -g ${geno file} -p ${pheno file} -r ${the line of phenotype} -n ${geno number} -w ${workdir}
 
